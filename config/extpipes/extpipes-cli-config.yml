@@ -46,12 +46,11 @@ rawdbs:
               role: Bootcamp 60 Administrator
               send-notification: false
 
- rawdbs:
-  - rawdb-name: src:001:sap:db
-    dataset-external-id: src:001:sap:ds
-    short-name: sap
+  - rawdb-name: src:002:opcua:db
+    dataset-external-id: src:002:opcua:ds
+    short-name: opcua
     rawtables:
-      - rawtable-name: assets
+      - rawtable-name: datapoints
         pipelines:
         - source: csv
           schedule: On trigger
