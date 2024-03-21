@@ -3,11 +3,6 @@ externalId: tr-ts_assets_mapping
 name: ts_assets_mapping
 query:
     file: transformation.sql
-  SELECT ts.externalId AS externalId,
-         ast.id AS assetId
-  FROM `_cdf`.`timeseries` AS ts
-
-  INNER JOIN `_cdf`.`assets` AS ast ON split(ts.externalId, ":") [0] = ast.externalId
 destination:
   type: timeseries
 ignoreNullFields: true
